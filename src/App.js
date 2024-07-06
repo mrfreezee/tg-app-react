@@ -3,6 +3,9 @@ import './App.css';
 import { useTelegram } from './hooks/useTelegram';
 import Header from './components/header/header';
 import Button from './components/button/button';
+import { Route, Routes } from 'react-router-dom';
+import ProductList from './components/productList/productList';
+import Form from './components/form/form';
 window.Telegram.WebApp
 
 
@@ -18,7 +21,10 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Button onClick={onToggleButton}>Toggle</Button>
+      <Routes>
+        <Route index element={<ProductList/>}/>
+        <Route path='/form' element={<Form/>}/>
+      </Routes>
     </div>
   );
 }
