@@ -5,4 +5,9 @@ body{
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
+.app{
+  margin: 0;
+  padding: 15px;
+  box-sizing: border-box;
+}
 
