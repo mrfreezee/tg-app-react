@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './productList.css'
 import ProductItem from '../productItem/productItem';
 import { useTelegram } from '../../hooks/useTelegram';
 
 const products = [
-    {id:1, title: 'Майка', price: 50, description: 'Белая'},
-    {id:2, title: 'Шорты', price: 63, description: 'Черные'},
-    {id:3, title: 'Джинсы', price: 70, description: 'Темно-синие'},
-    {id:4, title: 'Кепка', price: 20, description: 'Белая'},
-    {id:5, title: 'Майка', price: 40, description: 'Желтая'},
-    {id:6, title: 'Майка', price: 45, description: 'Синяя'}
+    {id:1, title: 'Майка', price: '50p', description: 'Белая'},
+    {id:2, title: 'Шорты', price: '63p', description: 'Черные'},
+    {id:3, title: 'Джинсы', price: '70p', description: 'Темно-синие'},
+    {id:4, title: 'Кепка', price: '20p', description: 'Белая'},
+    {id:5, title: 'Майка', price: '40p', description: 'Желтая'},
+    {id:6, title: 'Майка', price: '45p', description: 'Синяя'}
 ]
     
 
@@ -18,6 +18,8 @@ const products = [
             return acc += item.price
         }, 0)
     }
+
+
 const ProductList = () => {
     
     const [addedItems, setAddedItems] = useState([])
